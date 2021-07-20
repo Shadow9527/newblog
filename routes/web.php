@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    phpinfo();
+    //phpinfo();
 });
 Route::post('/test01',[\App\Http\Controllers\admin\loginController::class,'test01']);
