@@ -8,8 +8,9 @@ use Illuminate\Http\Request;
 
 class loginController extends Controller
 {
-    public function test01(Request $request){
+    public function test01($request){
         $params=$request->input('p1');
         return $params;
     }
+
 }

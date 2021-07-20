@@ -20,4 +20,11 @@ Route::post('/test01',[\App\Http\Controllers\admin\loginController::class,'test0
 Route::get('/test02',function (){
    return "hello world";
 });
+//普通的curd
+Route::get('/insert',[\App\Http\Controllers\curdController::class,'insert']);
+Route::get('/select',[\App\Http\Controllers\curdController::class,'select']);
+Route::get('/update',[\App\Http\Controllers\curdController::class,'update']);
+Route::get('/delete',[\App\Http\Controllers\curdController::class,'delete']);
 
+//利用model层操作的curd
+Route::get('/tSelect',[\App\Http\Controllers\curdController::class,'testSelect']);
