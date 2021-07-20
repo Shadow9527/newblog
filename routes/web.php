@@ -17,3 +17,6 @@ Route::get('/', function () {
     //phpinfo();
 });
 Route::post('/test01',[\App\Http\Controllers\admin\loginController::class,'test01']);
+Route::get('/test02',function (){
+   return "hello world";
+});
