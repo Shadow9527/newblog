@@ -20,6 +20,4 @@ Route::post('/test01',[\App\Http\Controllers\admin\loginController::class,'test0
 Route::get('/test02',function (){
    return "hello world";
 });
-Route::get('/test03',function (){
-    return "ahdghaj";
-});
+
