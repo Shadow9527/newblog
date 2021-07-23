@@ -28,3 +28,5 @@ Route::get('/delete',[\App\Http\Controllers\curdController::class,'delete']);
 
 //利用model层操作的curd
 Route::get('/tSelect',[\App\Http\Controllers\curdController::class,'testSelect']);
+Route::get('/tDelete',[\App\Http\Controllers\curdController::class,'testDel']);
+Route::get('/tInsert',[\App\Http\Controllers\curdController::class,'testIns']);

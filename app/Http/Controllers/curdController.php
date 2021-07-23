@@ -18,14 +18,27 @@ class curdController extends Controller
         return dd($user);
     }
     public function update(){
-        return DB::table('student')->where(['id'=>1])->update(['username'=>'欧志发']);
+        return DB::table('student')->where('id','>','')->update(['username'=>'欧志发']);
     }
     public function delete(){
-        return DB::table('student')->where('id','<','3')->delete()      ;
+        return DB::table('student')->where('id','=','5')->delete()      ;
     }
 
     public function testSelect(){
         $user = Student::query()->get();
         return dd($user);
     }
+
+    public function testDel(){
+        return Student::query()->delete();
+    }
+
+    public function testIns(){
+        $student = new Student();
+        $student->username = "张三";
+        $student->sex = "男";
+        $student->password = "sajhkfh";
+        $student->save();
+    }
+
 }
